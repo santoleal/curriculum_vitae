@@ -1,0 +1,45 @@
+.centrado {
+    margin: auto !important;
+    text-align: center;
+}
+
+
+.navegacion {
+    border: rgb(199, 198, 198) 1px solid;
+    margin: 0 1px;
+    text-transform: uppercase;
+}
+
+.navegacion a:hover {
+    background-color: rgb(131, 12, 12);
+    color: white;
+}
+
+.navegacion a:active {
+    background-color: aquamarine;
+}
+.contenedor-principal {
+    margin: 0 auto;
+    padding: 50px 5px;
+}
+
+.fondo {
+    background-image: url(./assets/img/f_leal_francia2.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.fondillo {
+    background-color: #000000c5;
+    border-radius: 20px;
+    padding-top: 20px;
+}
+
+.fondillo a {
+    color: rgb(221, 221, 221);
+}
+
+.fondillo a:hover {
+    color: aquamarine;
+}
