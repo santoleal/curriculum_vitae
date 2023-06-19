@@ -1,8 +1,131 @@
-.centrado {
-    margin: auto !important;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+/* FUENTES*/
+
+@font-face {
+    font-family: "Alegreya-Regular";
+    src: url("../fonts/alegreya/Alegreya-Regular.otf");
+}
+
+
+
+@font-face {
+    font-family: "Viga-Regular";
+    src: url("../fonts/Viga-Regular.otf");
+}
+
+
+@font-face {
+    font-family: "NanumBrushScript-Regular";
+    src: url("../fonts/NanumBrushScript-Regular");
+}
+
+
+
+/* TÍTULOS */
+
+h1, h2, h3, h4, h5 {
+    font-family: "Viga-Regular", cursive;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo-pagina {
+    margin-bottom: 40px;
+
+}
+
+.titulo-efecto {
+    margin: 0;
+    padding-top: 5px;
+    /* background-color: #e1ca250d; */
+    /* border-radius: 10px; */
+    border-top: 10px solid #0000001f;
+    border-bottom: 10px solid #0000001f;
+    border-left: solid 10px #00000000;
+    border-right: solid 10px #00000000;
+}
+
+
+.titulo-efecto:hover {
+    background-color: #a52a2a30;
+}
+
+
+.titulo-experiencia {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.titulo-experiencia:hover {
+    color: brown;
+}
+
+
+
+/* PÁRRAFOS */
+p {
+    font-family: "NanumBrushScript-Regular", cursive;
+}
+
+.parrafo-centro {
     text-align: center;
 }
 
+abbr[title] {
+text-decoration: line-through !important;
+}
+
+abbr[title]:hover{
+    text-decoration: none !important;
+    }
+
+.jugando:hover {
+    color: yellow;
+}
+
+.resaltado {
+    display: inline-block;
+}
+
+.resaltado:hover {
+    color: rgb(255, 205, 40);
+}
+
+
+.list-group-item {
+    /* width: 50%; */
+    margin: 10px;
+}
+
+.list-group-item:hover{
+    background-color: #ffff0059;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: chocolate;
+}
+/* 
+.parrafo-centro.principal {
+    font-weight: bolder;
+    font-size: x-large;    
+}
+.parrafo-centro.secundario {
+    font-size: x-large;
+} 
+*/
+
+
+
+
+
+/* NAVEGACIÓN*/
 
 .navegacion {
     border: rgb(199, 198, 198) 1px solid;
@@ -18,16 +141,27 @@
 .navegacion a:active {
     background-color: aquamarine;
 }
+
+
+
+/* CONTENEDORES */
+
+.centrado {
+    margin: auto !important;
+    text-align: center;
+}
+
 .contenedor-principal {
     margin: 0 auto;
     padding: 50px 5px;
 }
 
 .fondo {
-    background-image: url(./assets/img/f_leal_francia2.jpeg);
+    background-image: url(../img/f_leal_francia2.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .fondillo {
@@ -37,16 +171,49 @@
     margin: 0 5px 10px 0;
 }
 
+.fondillo:hover {
+    background-color: brown;
+    color: indianred;
+}
+
+.fondillo h1:hover {
+    color: white;
+    font-weight: bold;
+}
+.fondillo h4:hover {
+    color: yellow;
+}
+.fondillo h5:hover {
+    color: yellow;
+}
+
+
 .fondillo a {
     color: rgb(221, 221, 221);
+    text-decoration: none;
 }
 
 .fondillo a:hover {
-    color: aquamarine;
+    color: yellow;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 
-.titulo-experiencia {
-    text-transform: uppercase;
-    font-weight: bolder;
+
+
+/* TARJETAS DE EXPERIENCIAS */
+
+.card:hover {
+    background-color: bisque;
+}
+
+
+
+
+/* SECCIONES */
+
+.secundario {
+    margin-bottom: 40px;
+    margin-top: 40px !important;
 }
