@@ -1,0 +1,64 @@
+@media screen and (min-width: 768px) {
+
+    .proyecto__grilla {
+        width: 100%;
+        height: 100%;
+        display: grid;
+    
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3,200px);
+    
+        column-gap: 10px;
+        row-gap: 10px;
+    
+        grid-template-areas:
+            "proyecto__1 proyecto__2 proyecto__3 proyecto__4"
+            "proyecto__1 proyecto__2 proyecto__3 proyecto__4"
+            "proyecto__5 proyecto__5 proyecto__5 proyecto__4";
+    
+        overflow: hidden;
+        justify-content: center;
+    
+    }
+    
+
+    .proyecto__tarjeta {
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .proyecto__titulo {
+        font-size: x-large;
+        text-shadow: -2px 0px 0px black;
+        font-weight: normal;
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .proyecto__descripcion {
+        font-size: medium;
+        /* display: none; */
+        width: 100%;
+        visibility: hidden; 
+    }
+
+
+    .proyecto__titulo:hover + .proyecto__descripcion {
+        display: flex;
+        width: 100%;
+        color: white;
+        font-size: medium;
+        padding: 0 10px;
+        transform: translate(0px, -50px) rotate(-10deg);
+        background-color: #0F2027;
+        visibility: visible;
+        align-items: start;
+        top: 0;
+    }
+
+}

@@ -1,0 +1,28 @@
+/* TARJETAS DE EXPERIENCIAS */
+
+.card:hover {
+    background-color: bisque;
+}
+
+
+.list-group-item {
+    margin: 10px;
+
+
+    &:hover{
+        background-color: #ffff0059;
+        border-radius: 5px;
+        font-weight: bolder;
+        color: chocolate;
+    }
+
+    & p {
+        /* width: 50%; */
+        /* margin-top: 20px; */
+    }
+
+}
+
+.navbar-collapse {
+    margin-top: 10px !important; 
+}

@@ -1,0 +1,19 @@
+/* HEADER - NAVEGACIÓN */ 
+
+.navegacion {
+    border: rgb(199, 198, 198) 1px solid;
+    margin: 0 1px;
+    text-transform: uppercase;
+
+
+    & a:hover {
+    background-color: rgb(131, 12, 12);
+    color: white;
+    }
+
+    & a:active {
+    background-color: aquamarine;
+    }
+
+}
+

@@ -1,0 +1,9 @@
+@mixin bg--principal {
+    margin: 0 auto;
+    padding: 50px 5px;
+    background-image: $fotofondo1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}

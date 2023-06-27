@@ -1,873 +1,654 @@
-/* INTENTO DE UTILIZAR LA METODOLOGÍA BEM */
-/*------------------------------------------------------------------------------------*/
-/*  
-    ÍNDICE
-    1. HABILITACIONES E IMPORTACIONES
-    2. BLOQUES SEMÁNTICOS HTML
-    3. ELEMENTOS
-    4. MODIFICADORES 
-*/
-/*------------------------------------------------------------------------------------*/
-
-
-/*____________________________________________________________________________________*/
-/* 
-// 
-// 1. HABILITACIONES E IMPORTACIONES
-//
-*/
-
-/* ELIMINACIÓN DE LOS BORDES POR DEFECTO DEL NAVEGADOR*/
+@charset "UTF-8";
+/* Variables Fuentes */
+/* Variables Fondos */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-/* FUENTES*/
-
-@font-face {
-    font-family: "Alegreya-Regular";
-    src: url("../fonts/alegreya/Alegreya-Regular.otf");
+  margin: 0;
+  padding: 0;
 }
-
-
-
-@font-face {
-    font-family: "Viga-Regular";
-    src: url("../fonts/Viga-Regular.otf");
-}
-
-
-@font-face {
-    font-family: "NanumBrushScript-Regular";
-    src: url("../fonts/NanumBrushScript-Regular");
-}
-
 
 /*
-@media screen and  {
-    
+///////////////////////////
+/// FUENTES
+///////////////////////////
+*/
+@font-face {
+  font-family: "Alegreya-Regular";
+  src: url("../fonts/alegreya/Alegreya-Regular.otf");
 }
+@font-face {
+  font-family: "Viga-Regular";
+  src: url("../fonts/Viga-Regular.otf");
+}
+@font-face {
+  font-family: "NanumBrushScript-Regular";
+  src: url("../fonts/NanumBrushScript-Regular");
+}
+/*
+///////////////////////////
+/// ESTILOS PRINCIPALES
+///////////////////////////
 */
+h1 {
+  font-size: xx-large;
+  font-family: "Viga-Regular", cursive;
+}
 
+h2 {
+  font-size: x-large;
+  font-family: "Viga-Regular", cursive;
+}
 
+h3 {
+  font-size: large;
+  font-family: "Viga-Regular", cursive;
+}
 
+h4 {
+  font-size: medium;
+  font-family: "Viga-Regular", cursive;
+}
 
-/*____________________________________________________________________________________*/
-/* 
-// 
-// 2. BLOQUES SEMÁNTICOS HTML
-//
-*/
-
-h1, h2, h3, h4, h5 {
-    font-family: "Viga-Regular", cursive;
+h5 {
+  font-size: small;
+  font-family: "Viga-Regular", cursive;
 }
 
 p {
-    font-family: "NanumBrushScript-Regular", cursive;
+  font-family: "NanumBrushScript-Regular", cursive;
 }
 
-
-
-
-
-/*____________________________________________________________________________________*/
-/* 
-// 
-// 3. ELEMENTOS DEL SITIO
-//
-*/
-
-
-/* NAVEGACIÓN*/
-
+/* HEADER - NAVEGACIÓN */
 .navegacion {
-    border: rgb(199, 198, 198) 1px solid;
-    margin: 0 1px;
-    text-transform: uppercase;
+  border: rgb(199, 198, 198) 1px solid;
+  margin: 0 1px;
+  text-transform: uppercase;
 }
-
 .navegacion a:hover {
-    background-color: rgb(131, 12, 12);
-    color: white;
+  background-color: rgb(131, 12, 12);
+  color: white;
 }
-
 .navegacion a:active {
-    background-color: aquamarine;
+  background-color: aquamarine;
 }
 
-
+/* TÍTULOS */
+.titulo {
+  width: 100%;
+}
+.titulo__sitio {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.titulo__pagina {
+  margin-bottom: 40px;
+}
+.titulo__efecto {
+  margin: 0;
+  padding-top: 5px;
+  border-top: 10px solid rgba(0, 0, 0, 0.1215686275);
+  border-bottom: 10px solid rgba(0, 0, 0, 0.1215686275);
+  border-left: solid 10px rgba(0, 0, 0, 0);
+  border-right: solid 10px rgba(0, 0, 0, 0);
+}
+.titulo__efecto:hover {
+  background-color: rgba(165, 42, 42, 0.1882352941);
+}
+.titulo__experiencia {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: x-large;
+}
+.titulo__experiencia:hover {
+  color: brown;
+}
 
 /* CONTENEDORES */
-
-
-
 .contenedor {
-    width:100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+  /* SECCIONES INFERIORES */
+  /* RECUADRO CON INFORMACIÓN DESTACADA */
 }
-
 .contenedor__centrado {
-    margin: auto !important;
-    text-align: center;    
+  margin: auto !important;
+  text-align: center;
 }
-
 .contenedor__principal {
-    margin: 0 auto;
-    padding: 50px 5px;
-    background-image: url(../img/f_leal_francia2.jpeg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+  margin: 0 auto;
+  padding: 50px 5px;
+  background-image: url(../img/f_leal_francia2.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
-
-/* SECCIONES INFERIORES */
-
 .contenedor__secundario {
-    margin-bottom: 40px;
-    margin-top: 40px !important;
+  margin-bottom: 40px;
+  margin-top: 40px !important;
+}
+.contenedor__destacado {
+  background-color: rgba(0, 0, 0, 0.7725490196);
+  border-radius: 20px;
+  padding: 20px 10px;
+  margin: 0 5px 10px 0;
+  text-align: center;
+}
+.contenedor__destacado:hover {
+  background-color: brown;
+  color: indianred;
+}
+.contenedor__destacado a {
+  color: rgb(221, 221, 221);
+  text-decoration: none;
+}
+.contenedor__destacado a:hover {
+  color: yellow;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.contenedor__destacado h1:hover {
+  color: white;
+  font-weight: bold;
+}
+.contenedor__destacado h4:hover {
+  color: yellow;
+}
+.contenedor__destacado h5:hover {
+  color: yellow;
 }
 
 #contenedor__tecnologias {
-    margin: 0px;
-    border: 10px solid #000000;
+  margin: 0px;
+  border: 10px solid #000000;
 }
-
-
-/* RECUADRO CON INFORMACIÓN DESTACADA */
-
-.contenedor__destacado {
-    background-color: #000000c5;
-    border-radius: 20px;
-    padding: 20px 10px;
-    margin: 0 5px 10px 0;
-    text-align: center;
-}
-
-
-.contenedor__destacado:hover {
-    background-color: brown;
-    color: indianred; 
-} 
-
-.contenedor__destacado a {
-    color: rgb(221, 221, 221);
-    text-decoration: none;
-}
-
-.contenedor__destacado a:hover {
-    color: yellow;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.contenedor__destacado h1:hover {
-    color: white;
-    font-weight: bold;
-}
-.contenedor__destacado h4:hover {
-    color: yellow;
-}
-.contenedor__destacado h5:hover {
-    color: yellow;
-}
-
-
-
-
-
-
-
-
-
-/* TÍTULOS */
-
-.titulo__sitio {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.titulo__pagina {
-    margin-bottom: 40px;
-
-}
-
-.titulo__efecto {
-    margin: 0;
-    padding-top: 5px;
-    /* background-color: #e1ca250d; */
-    /* border-radius: 10px; */
-    border-top: 10px solid #0000001f;
-    border-bottom: 10px solid #0000001f;
-    border-left: solid 10px #00000000;
-    border-right: solid 10px #00000000;
-}
-
-
-.titulo__efecto:hover {
-    background-color: #a52a2a30;
-}
-
-
-.titulo__experiencia {
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: x-large;
-}
-
-.titulo__experiencia:hover {
-    color: brown;
-}
-
 
 /* PÁRRAFOS */
-
 abbr[title] {
-    text-decoration: line-through !important;
-    }
-    
-    abbr[title]:hover{
-        text-decoration: none !important;
-        }
+  text-decoration: line-through !important;
+}
+abbr[title]:hover {
+  text-decoration: none !important;
+}
 
-    .abbr__acotacion:hover {
-        color: yellow;
-    }        
-        
+.abbr__acotacion:hover {
+  color: yellow;
+}
+
+.parrafo {
+  width: 100%;
+}
 .parrafo__izquierda:hover {
-    text-align: left;
-    padding: 0 20px;
+  text-align: left;
+  padding: 0 20px;
 }
-
 .parrafo__derecha:hover {
-    text-align: right;
-    padding: 0 20px;
+  text-align: right;
+  padding: 0 20px;
 }
-
 .parrafo__resaltado {
-    display: inline-block;
+  display: inline-block;
 }
-
 .parrafo__resaltado:hover {
-    color: rgb(255, 205, 40);
+  color: rgb(255, 205, 40);
 }
 
-
-
-
+/* CURSOS Y CAPACITACIONES */
 .cursos {
-    background-color: brown;
-    border-radius: 5px;
-    border: 1px solid black;
-    padding: 15px;
-    margin-top: 20px;
-    font-size: large;
-
+  background-color: brown;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: large;
 }
-
 .cursos p {
-    font-family: "Viga-Regular", cursive; 
+  font-family: "Viga-Regular", cursive;
 }
-
 .cursos__institucion, .cursos__fecha, .cursos__detalle {
-    font-weight: bold;
-    text-transform: uppercase;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: burlywood;
 }
 
-
-
-
-/* 
-.parrafo-centro.principal {
-    font-weight: bolder;
-    font-size: x-large;    
+/* TECNOLOGÍAS Y PROYECTOS */
+.tecnologias {
+  width: 100%;
 }
-.parrafo-centro.secundario {
-    font-size: x-large;
-} 
-*/
-
-
-/* GRIILLA TECNOLOGÍAS*/
-
-
-/* 
-.tecnologias__grilla {
-
-    width: 100%;
-    height: 100vh;
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3,1fr);
-
-    column-gap: 10px;
-    row-gap: 10px;
-
-    grid-template-areas:
-        "tecnologias__1 tecnologias__2 tecnologias__3"
-        "tecnologias__4 tecnologias__5 tecnologias__6"
-        "tecnologias__7 tecnologias__8 tecnologias__9";
-
-    overflow: hidden;
-    justify-content: center;
-
-}
-*/
-
-
-/* FLEX TECNOLOGÍAS */
-
 .tecnologias__animaciones {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    font-weight: bolder;
-    font-size: larger;
-    color: rgba(0, 0, 0, 0);
-    text-shadow: 0px 0px 14px #0000009e;
-
-
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-weight: bolder;
+  font-size: larger;
+  color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 0px 14px rgba(0, 0, 0, 0.6196078431);
 }
-
 .tecnologias__1 {
-    height: 50px;
-    background-image: url("../img/tecnologias/html5.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    transition: all 2s;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 20px 0;
+  height: 50px;
+  background-image: url("../img/tecnologias/html5.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: all 2s;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 20px 0;
 }
-
 .tecnologias__1:hover {
-    background-position: right;
-    color:aliceblue;
-    padding-left: 20%;
-
+  background-position: right;
+  color: aliceblue;
+  padding-left: 20%;
 }
-
-
-
 .tecnologias__2 {
-    height: 50px;
-    background-image: url("../img/tecnologias/css-logo.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    transition: all 2s;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 20px 0;
+  height: 50px;
+  background-image: url("../img/tecnologias/css-logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: all 2s;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 20px 0;
 }
-
 .tecnologias__2:hover {
-    background-position: right;
-    color:aliceblue;
-    padding-left: 20%;
+  background-position: right;
+  color: aliceblue;
+  padding-left: 20%;
 }
-
 .tecnologias__3 {
-    height: 50px;
-    background-image: url("../img/tecnologias/sass.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    transition: all 2s;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 20px 0;
+  height: 50px;
+  background-image: url("../img/tecnologias/sass.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: all 2s;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 20px 0;
 }
-
 .tecnologias__3:hover {
-    background-position: right;
-    color:aliceblue;
-    padding-left: 20%;
+  background-position: right;
+  color: aliceblue;
+  padding-left: 20%;
 }
-
 .tecnologias__4 {
-    height: 50px;
-    background-image: url("../img/tecnologias/python.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    transition: all 2s;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 20px 0;
+  height: 50px;
+  background-image: url("../img/tecnologias/python.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: all 2s;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 20px 0;
 }
-
 .tecnologias__4:hover {
-    background-position: right;
-    color:aliceblue;
-    padding-left: 20%;
+  background-position: right;
+  color: aliceblue;
+  padding-left: 20%;
 }
-
-
 .tecnologias__5 {
-    height: 50px;
-    background-image: url("../img/tecnologias/MySQL.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    transition: all 2s;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 20px 0;
+  height: 50px;
+  background-image: url("../img/tecnologias/MySQL.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: all 2s;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 20px 0;
 }
-
 .tecnologias__5:hover {
-    background-position: right;
-    color:aliceblue;
-    padding-left: 20%;
+  background-position: right;
+  color: aliceblue;
+  padding-left: 20%;
 }
-    
-
 .tecnologias__6 {
-    height: 50px;
-    background-image: url("../img/tecnologias/linux.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    transition: all 2s;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 20px 0;
+  height: 50px;
+  background-image: url("../img/tecnologias/linux.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: all 2s;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 20px 0;
 }
-
 .tecnologias__6:hover {
-    background-position: right;
-    color:aliceblue;
-    padding-left: 20%;
+  background-position: right;
+  color: aliceblue;
+  padding-left: 20%;
 }
-
-
 .tecnologias__7 {
-    height: 50px;
-    background-image: url("../img/tecnologias/Bootstrap.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    transition: all 2s;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 20px 0;
+  height: 50px;
+  background-image: url("../img/tecnologias/Bootstrap.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: all 2s;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 20px 0;
 }
-
 .tecnologias__7:hover {
-    background-position: right;
-    color:aliceblue;
-    padding-left: 20%;
+  background-position: right;
+  color: aliceblue;
+  padding-left: 20%;
 }
-
-
 .tecnologias__8 {
-    height: 50px;
-    background-image: url("../img/tecnologias/WordPress.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    transition: all 2s;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 20px 0;
+  height: 50px;
+  background-image: url("../img/tecnologias/WordPress.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: all 2s;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 20px 0;
 }
-
 .tecnologias__8:hover {
-    background-position: right;
-    color:aliceblue;
-    padding-left: 20%;
+  background-position: right;
+  color: aliceblue;
+  padding-left: 20%;
 }
-
-
 .tecnologias__9 {
-    height: 50px;
-    background-image: url("../img/tecnologias/google-workspace.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    transition: all 2s;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 20px 0;
+  height: 50px;
+  background-image: url("../img/tecnologias/google-workspace.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: all 2s;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 20px 0;
 }
-
 .tecnologias__9:hover {
-    background-position: right;
-    color:aliceblue;
-    padding-left: 20%;
+  background-position: right;
+  color: aliceblue;
+  padding-left: 20%;
 }
-
-
-
-
-
-
 
 /* GRILLA PROYECTOS */
-
+.proyecto {
+  width: 100%;
+  height: 100%;
+}
 .proyecto__grilla {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-areas: "proyecto__1" "proyecto__2" "proyecto__3" "proyecto__4" "proyecto__5";
+  overflow: hidden;
+  justify-content: center;
+}
+.proyecto__tarjeta {
+  display: flex;
+  flex-wrap: wrap;
+}
+.proyecto__titulo {
+  font-size: x-large;
+  text-shadow: -2px 0px 0px black;
+  font-weight: normal;
+  color: white;
+  width: 100%;
+  height: 50%;
+}
+.proyecto__descripcion {
+  display: block;
+  font-size: medium;
+  width: 100%;
+  color: white;
+  font-size: medium;
+  padding: 0 10px;
+  transform: translate(0px, 0px) rotate(-10deg);
+  background-color: #0F2027;
+}
+.proyecto__descripcion:hover {
+  display: block;
+  transform: translate(0px, -10px) rotate(-10deg);
+  background-color: #03212e;
+}
+.proyecto__1 {
+  grid-area: proyecto__1;
+  background: #DD5E89;
+  background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89);
+  background: linear-gradient(to right, #F7BB97, #DD5E89);
+  border: 15px double #000000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: brown;
+}
+.proyecto__1:hover {
+  background: #0F2027;
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+.proyecto__2 {
+  grid-area: proyecto__2;
+  background: #0F2027;
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  border: 10px double #000000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.proyecto__2:hover {
+  background: #373B44;
+  background: -webkit-linear-gradient(to right, #4286f4, #373B44);
+  background: linear-gradient(to right, #4286f4, #373B44);
+}
+.proyecto__3 {
+  grid-area: proyecto__3;
+  background: #373B44;
+  background: -webkit-linear-gradient(to right, #4286f4, #373B44);
+  background: linear-gradient(to right, #4286f4, #373B44);
+  border: 15px double #000000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.proyecto__3:hover {
+  background: #c31432;
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);
+  background: linear-gradient(to right, #240b36, #c31432);
+}
+.proyecto__4 {
+  grid-area: proyecto__4;
+  background: #c31432;
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);
+  background: linear-gradient(to right, #240b36, #c31432);
+  border: 10px double #000000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.proyecto__4:hover {
+  background: #2C3E50;
+  background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);
+  background: linear-gradient(to right, #4CA1AF, #2C3E50);
+}
+.proyecto__5 {
+  grid-area: proyecto__5;
+  background: #2C3E50;
+  background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);
+  background: linear-gradient(to right, #4CA1AF, #2C3E50);
+  border: 8px double #000000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.proyecto__5:hover {
+  background: #DD5E89;
+  background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89);
+  background: linear-gradient(to right, #F7BB97, #DD5E89);
+}
+
+/* TARJETAS DE EXPERIENCIAS */
+.card:hover {
+  background-color: bisque;
+}
+
+.list-group-item {
+  margin: 10px;
+}
+.list-group-item:hover {
+  background-color: rgba(255, 255, 0, 0.3490196078);
+  border-radius: 5px;
+  font-weight: bolder;
+  color: chocolate;
+}
+.list-group-item p {
+  /* width: 50%; */
+  /* margin-top: 20px; */
+}
+
+.navbar-collapse {
+  margin-top: 10px !important;
+}
+
+/* FORMULARIO DE CONTACTO*/
+.contact_form {
+  width: 460px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: #fbfbfb;
+  padding: 0 30px;
+}
+
+input {
+  background-color: #fbfbfb;
+  width: 408px;
+  height: 40px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: brown;
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  background-color: #fbfbfb;
+  width: 405px;
+  height: 150px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: brown;
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  padding-top: 15px;
+}
+
+label {
+  display: block;
+  float: center;
+}
+
+button {
+  height: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: brown;
+  border-color: brown;
+  border-style: solid;
+  border-radius: 10px;
+  width: 420px;
+  cursor: pointer;
+}
+button p {
+  color: #fff;
+}
+
+span {
+  color: brown;
+}
+
+.aviso {
+  font-size: 13px;
+  color: #0e0e0e;
+}
+
+.formulario {
+  outline: 0;
+}
+.formulario input:focus {
+  border: 1px solid #97d848;
+}
+.formulario textarea:focus {
+  border: 1px solid #97d848;
+}
+
+@media screen and (min-width: 768px) {
+  .proyecto__grilla {
     width: 100%;
     height: 100%;
-    margin-top: 20px;
     display: grid;
-
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5,1fr);
-
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
     column-gap: 10px;
     row-gap: 10px;
-
-    grid-template-areas:
-        "proyecto__1"
-        "proyecto__2"
-        "proyecto__3"
-        "proyecto__4"
-        "proyecto__5";
-
+    grid-template-areas: "proyecto__1 proyecto__2 proyecto__3 proyecto__4" "proyecto__1 proyecto__2 proyecto__3 proyecto__4" "proyecto__5 proyecto__5 proyecto__5 proyecto__4";
     overflow: hidden;
     justify-content: center;
-}
-
-
-.proyecto__tarjeta {
-
+  }
+  .proyecto__tarjeta {
     display: flex;
     flex-wrap: wrap;
-
-}
-
-.proyecto__titulo {
+  }
+  .proyecto__titulo {
     font-size: x-large;
     text-shadow: -2px 0px 0px black;
     font-weight: normal;
     color: white;
     width: 100%;
-    height: 50%;
-
-}
-
-.proyecto__descripcion {
-    display: block;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .proyecto__descripcion {
     font-size: medium;
+    /* display: none; */
+    width: 100%;
+    visibility: hidden;
+  }
+  .proyecto__titulo:hover + .proyecto__descripcion {
+    display: flex;
     width: 100%;
     color: white;
     font-size: medium;
     padding: 0 10px;
-    transform: translate(0px, 0px) rotate(-10deg);
+    transform: translate(0px, -50px) rotate(-10deg);
     background-color: #0F2027;
-}
-
-.proyecto__descripcion:hover {
-    display: block;
-    transform: translate(0px, -10px) rotate(-10deg);
-    background-color: #03212e;
-}
-
-
-
-.proyecto__1 {
-    grid-area: proyecto__1;
-    background: #DD5E89; 
-    background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89);  
-    background: linear-gradient(to right, #F7BB97, #DD5E89); 
-    border: 15px double #000000;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    color:brown;
-}
-
-.proyecto__1:hover {
-    background: #0F2027; 
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
-}
-
-
-
-.proyecto__2 {
-    grid-area: proyecto__2;
-    background: #0F2027; 
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
-    border: 10px double #000000;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.proyecto__2:hover {
-    background: #373B44; 
-    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  
-    background: linear-gradient(to right, #4286f4, #373B44); 
-}
-
-.proyecto__3 {
-    grid-area: proyecto__3;
-    background: #373B44; 
-    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  
-    background: linear-gradient(to right, #4286f4, #373B44); 
-    border: 15px double #000000;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.proyecto__3:hover {
-    background: #c31432; 
-    background: -webkit-linear-gradient(to right, #240b36, #c31432);  
-    background: linear-gradient(to right, #240b36, #c31432); 
-}
-
-.proyecto__4 {
-    grid-area: proyecto__4;
-    background: #c31432; 
-    background: -webkit-linear-gradient(to right, #240b36, #c31432);  
-    background: linear-gradient(to right, #240b36, #c31432); 
-    border: 10px double #000000;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.proyecto__4:hover {
-    background: #2C3E50; 
-    background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  
-    background: linear-gradient(to right, #4CA1AF, #2C3E50);   
-}
-
-.proyecto__5 {
-    grid-area: proyecto__5;
-    background: #2C3E50; 
-    background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  
-    background: linear-gradient(to right, #4CA1AF, #2C3E50);     
-    border: 8px double #000000;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: fit-content;
-}
-
-.proyecto__5:hover {
-    background: #DD5E89; 
-    background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89);  
-    background: linear-gradient(to right, #F7BB97, #DD5E89);    
-}
-
-
-
-
-@media screen and (min-width: 768px) {
-
-    .proyecto__grilla {
-        width: 100%;
-        height: 100%;
-        display: grid;
-    
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3,200px);
-    
-        column-gap: 10px;
-        row-gap: 10px;
-    
-        grid-template-areas:
-            "proyecto__1 proyecto__2 proyecto__3 proyecto__4"
-            "proyecto__1 proyecto__2 proyecto__3 proyecto__4"
-            "proyecto__5 proyecto__5 proyecto__5 proyecto__4";
-    
-        overflow: hidden;
-        justify-content: center;
-    
-    }
-    
-
-    .proyecto__tarjeta {
-
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .proyecto__titulo {
-        font-size: x-large;
-        text-shadow: -2px 0px 0px black;
-        font-weight: normal;
-        color: white;
-        width: 100%;
-        height: 50%;
-    }
-
-    .proyecto__descripcion {
-        font-size: medium;
-        display: none;
-        width: 100%;
- 
-    }
-
-
-    .proyecto__titulo:hover + .proyecto__descripcion {
-        display: block;
-        width: 100%;
-        color: white;
-        font-size: medium;
-        padding: 0 10px;
-        transform: translate(0px, -50px) rotate(-10deg);
-        background-color: #0F2027;
-    }
-
-}
-
-
-
-
-
-
-/* FORMULARIO DE CONTACTO*/
-
-
-
-.contact_form{  
-    width: 460px; 
-    height: auto;
-    margin: 20px auto;
-    border-radius: 10px;  
-    padding-top: 10px;
-    padding-bottom: 20px;  
-    background-color: #fbfbfb; 
-    padding: 0 30px; 
+    visibility: visible;
+    align-items: start;
+    top: 0;
   }
-  
-  
-  input{
-    background-color: #fbfbfb; 
-    width: 408px; 
-    height: 40px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color: brown; 
-    margin-top: 10px;  
-    padding-left: 10px;
-    margin-bottom: 20px; 
-  }
-  
-  
-  textarea{
-    background-color: #fbfbfb; 
-    width: 405px; 
-    height: 150px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color:brown; 
-    margin-top: 10px;  
-    padding-left: 10px;
-    margin-bottom: 20px; 
-    padding-top: 15px; 
-  }
-  
-  
-  label{
-    display: block; 
-    float: center;  
-  }
-  
-  
-  button{
-    height: 45px; 
-    padding-left: 5px;
-    padding-right: 5px;   
-    margin-bottom: 20px; 
-    margin-top: 10px;   
-    text-transform: uppercase;
-    background-color: brown; 
-    border-color: brown; 
-    border-style: solid; 
-    border-radius: 10px;  
-    width: 420px;   
-    cursor: pointer;
-  }
-  
-  
-  button p{
-    color: #fff; 
-  }
-  
-  
-  span{
-    color: brown; 
-  }
-  
-  
-  .aviso{
-    font-size: 13px;  
-    color: #0e0e0e;  
-  }
-
-
-.formulario input:focus{
-    outline:0;
-    border: 1px solid #97d848;
-  }
-  
-  
-  .formulario textarea:focus{
-    outline:0;
-    border: 1px solid #97d848;
-  }
-  
-
-
-/*____________________________________________________________________________________*/
-/* 
-// 
-// 4. MODIFICADORES DE ELEMENTOS PUNTUALES
-//
-*/
-
-
-/* TARJETAS DE EXPERIENCIAS */
-
-.card:hover {
-    background-color: bisque;
 }
 
-
-.list-group-item {
-    /* width: 50%; */
-    margin: 10px;
-}
-
-.list-group-item:hover{
-    background-color: #ffff0059;
-    border-radius: 5px;
-    font-weight: bolder;
-    color: chocolate;
-}
-
-.list-group-item p {
-    /* width: 50%; */
-    /* margin-top: 20px; */
-}
-
-
-.navbar-collapse {
-    margin-top: 10px !important; 
-}
+/*# sourceMappingURL=style.css.map */

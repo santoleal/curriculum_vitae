@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+
+/*
+///////////////////////////
+/// FUENTES
+///////////////////////////
+*/
+
+@font-face {
+    font-family: "Alegreya-Regular";
+    src: url("../fonts/alegreya/Alegreya-Regular.otf");
+}
+
+
+
+@font-face {
+    font-family: "Viga-Regular";
+    src: url("../fonts/Viga-Regular.otf");
+}
+
+
+@font-face {
+    font-family: "NanumBrushScript-Regular";
+    src: url("../fonts/NanumBrushScript-Regular");
+}
+
+
+/*
+///////////////////////////
+/// ESTILOS PRINCIPALES
+///////////////////////////
+*/
+
+
+@for $i from 1 through 5 {
+    h#{$i} {
+        font-size: nth($fuenteh--tamanio, $i);
+        font-family: $fuente--titulo;    
+    }
+}
+
+
+p {
+    font-family: $fuente--parrafo;
+}
+
+
+
+
+
