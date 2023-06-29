@@ -1,0 +1,14 @@
+@function fondo--bgimg($page) {
+    @if $page == "index" {
+        @return url('../img/f_leal_francia2.jpeg');
+    } 
+    @else if $page == "academica" {
+        @return url('../img/f_leal_francia2.jpeg');
+    }
+    @else {
+        @return url('../img/f_leal_francia1.jpeg');
+    }
+}
+
+
+

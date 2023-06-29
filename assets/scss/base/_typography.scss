@@ -1,0 +1,103 @@
+/*///////////////////////////
+/// TIPOGRAFÍA - ESTILOS PRINCIPALES
+///////////////////////////*/
+
+
+@for $i from 1 through 5 {
+    h#{$i} {
+        font-size: nth($fuenteh--tamanio, $i);
+        font-family: $fuente--titulo;    
+    }
+}
+
+
+p {
+    font-family: $fuente--parrafo;
+}
+
+
+/* EFECTO TACHADO */
+
+abbr[title] {
+    text-decoration: line-through !important;
+    
+    &:hover{
+    text-decoration: none !important;
+    }
+
+}
+
+
+.abbr__acotacion:hover {
+        color: yellow;
+    }        
+
+
+/* TÍTULOS */
+
+.titulo {
+    width: 100%;
+
+
+    &__sitio {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__pagina {
+        margin-bottom: 40px;
+
+    }
+
+    &__efecto {
+        margin: 0;
+        padding-top: 5px;
+        border-top: 10px solid #0000001f;
+        border-bottom: 10px solid #0000001f;
+        border-left: solid 10px #00000000;
+        border-right: solid 10px #00000000;
+    
+
+
+        &:hover {
+        background-color: #a52a2a30;
+        }
+    }
+
+    &__experiencia {
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: x-large;
+
+        &:hover {
+        color: brown;
+        }
+    }
+
+}
+
+
+/* EFECTO RESALTADO */
+
+.parrafo {
+    width: 100%;
+
+    &__izquierda:hover {
+    text-align: left;
+    padding: 0 20px;
+    }
+
+    &__derecha:hover {
+    text-align: right;
+    padding: 0 20px;
+    }
+
+    &__resaltado {
+    display: inline-block;
+    
+
+        &:hover {
+        color: rgb(255, 205, 40);
+        }
+    }
+}

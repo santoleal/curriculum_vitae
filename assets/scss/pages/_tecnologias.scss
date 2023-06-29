@@ -1,194 +1,6 @@
-/* TÍTULOS */
-
-.titulo {
-    width: 100%;
-
-
-    &__sitio {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    &__pagina {
-        margin-bottom: 40px;
-
-    }
-
-    &__efecto {
-        margin: 0;
-        padding-top: 5px;
-        border-top: 10px solid #0000001f;
-        border-bottom: 10px solid #0000001f;
-        border-left: solid 10px #00000000;
-        border-right: solid 10px #00000000;
-    
-
-
-        &:hover {
-        background-color: #a52a2a30;
-        }
-    }
-
-    &__experiencia {
-        text-transform: uppercase;
-        font-weight: bolder;
-        font-size: x-large;
-
-        &:hover {
-        color: brown;
-        }
-    }
-
-}
-
-
-/* CONTENEDORES */
-
-.contenedor {
-    width:100%;
-    height: 100%;
-
-    &__centrado {
-    margin: auto !important;
-    text-align: center;    
-    }
-
-    &__principal {
-    @include bg--principal;
-    }
-
-/* SECCIONES INFERIORES */
-
-    &__secundario {
-    margin-bottom: 40px;
-    margin-top: 40px !important;
-    }
-
-
-
-/* RECUADRO CON INFORMACIÓN DESTACADA */
-
-    &__destacado {
-    background-color: #000000c5;
-    border-radius: 20px;
-    padding: 20px 10px;
-    margin: 0 5px 10px 0;
-    text-align: center;
-
-        &:hover {
-        background-color: brown;
-        color: indianred; 
-        }
-
-        a {
-        color: rgb(221, 221, 221);
-        text-decoration: none;
-        }
-
-        a:hover {
-        color: yellow;
-        font-weight: bold;
-        text-decoration: underline;
-        }
-
-        h1:hover {
-        color: white;
-        font-weight: bold;
-        }
-
-        h4:hover {
-        color: yellow;
-        }
-
-        h5:hover {
-        color: yellow;
-        }
-
-    }
-
-
-
-}
-
-
-#contenedor__tecnologias {
-    margin: 0px;
-    border: 10px solid #000000;
-}
-
-
-
-
-/* PÁRRAFOS */
-
-abbr[title] {
-    text-decoration: line-through !important;
-    
-    &:hover{
-    text-decoration: none !important;
-    }
-
-}
-
-
-.abbr__acotacion:hover {
-        color: yellow;
-    }        
-
-.parrafo {
-    width: 100%;
-
-    &__izquierda:hover {
-    text-align: left;
-    padding: 0 20px;
-    }
-
-    &__derecha:hover {
-    text-align: right;
-    padding: 0 20px;
-    }
-
-    &__resaltado {
-    display: inline-block;
-    
-
-        &:hover {
-        color: rgb(255, 205, 40);
-        }
-    }
-}
-
-
-
-
-/* CURSOS Y CAPACITACIONES */
-
-.cursos {
-    background-color: brown;
-    border-radius: 5px;
-    border: 1px solid black;
-    padding: 15px;
-    margin-top: 20px;
-    font-size: large;
-
-
-
-    & p {
-        font-family: $fuente--cursos; 
-    }
-
-    &__institucion, &__fecha, &__detalle {
-        font-weight: bold;
-        text-transform: uppercase;
-        color: burlywood;
-    }
-
-
-
-}
-
-
-/* TECNOLOGÍAS Y PROYECTOS */
+/*///////////////////////////
+/// PÁGINA TECNOLOGÍAS Y PROYECTOS
+///////////////////////////*/
 
 
 .tecnologias {
@@ -403,6 +215,7 @@ abbr[title] {
 .proyecto {
     width: 100%;
     height: 100%;
+    @include proyecto--flex;
 
 
     &__grilla {
@@ -427,12 +240,6 @@ abbr[title] {
 
         }
 
-
-    &__tarjeta {
-
-        display: flex;
-        flex-wrap: wrap;
-    }
     
     &__titulo {
         font-size: x-large;
@@ -470,9 +277,6 @@ abbr[title] {
         background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89);  
         background: linear-gradient(to right, #F7BB97, #DD5E89); 
         border: 15px double #000000;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
         color:brown;
     
         &:hover {
@@ -490,9 +294,6 @@ abbr[title] {
         background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  
         background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
         border: 10px double #000000;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
     
         &:hover {
             background: #373B44; 
@@ -507,9 +308,6 @@ abbr[title] {
         background: -webkit-linear-gradient(to right, #4286f4, #373B44);  
         background: linear-gradient(to right, #4286f4, #373B44); 
         border: 15px double #000000;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
 
         &:hover {
             background: #c31432; 
@@ -524,9 +322,6 @@ abbr[title] {
         background: -webkit-linear-gradient(to right, #240b36, #c31432);  
         background: linear-gradient(to right, #240b36, #c31432); 
         border: 10px double #000000;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
 
         &:hover {
             background: #2C3E50; 
@@ -541,9 +336,6 @@ abbr[title] {
         background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  
         background: linear-gradient(to right, #4CA1AF, #2C3E50);     
         border: 8px double #000000;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
 
         &:hover {
             background: #DD5E89; 
