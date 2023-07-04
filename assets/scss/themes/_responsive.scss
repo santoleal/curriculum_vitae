@@ -36,6 +36,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        &:hover{
+            display: contents;
+            height: 100vh;
+        }
     }
 
     .proyecto__descripcion {
@@ -57,6 +62,7 @@
         align-items: start;
         top: 0;
         border: 2px solid #fff;
+        
     }
 
 }

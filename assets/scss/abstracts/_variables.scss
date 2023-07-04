@@ -8,27 +8,8 @@ $fuenteh--tamanio: (xx-large, x-large, large, medium, small);
 
 /* Variables Fondos */
 
-// $fondo--foto1: url(../img/f_leal_francia2.jpeg);
-
-
-$fondo--bgimg: (
-    '../img/f_leal_francia.jpeg',
-    '../img/f_leal_francia2.jpeg', '../img/f_leal_francia3.jpeg', '../img/f_leal_francia4.jpeg');
 
 $pg--totales: 6;
 
-$pg--1: "home";
-$pg--2: "laboral";
-$pg--3: "academica";
-$pg--4: "tecnologia";
-$pg--5: "blog";
-$pg--6: "contacto";
 
-
-
-// @each $pagina in home, laboral, academica, tecnologia, blog, contacto {
-//     .contenedor__#{$pagina} {
-//         background-image: url(../img/f_leal_#{$pagina}.jpeg);
-//     }
-    
-// }
+$paginas: ("home", "laboral", "academica", "tecnologia", "blog", "contacto");

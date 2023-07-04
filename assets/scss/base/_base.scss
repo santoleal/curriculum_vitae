@@ -12,43 +12,20 @@
     text-align: center;    
     }
 
+    @each $pagina in $paginas {
+        $total--bgimg: 4;
+        $random-index: random($total--bgimg);
+        &__#{$pagina} {
+            background-image: url(../img/f_leal_#{$random-index}.jpeg);
+        }
+    
+    }    
 
     &__principal {
         @extend .contenedor;
 
     }
 
-    &__page {
-        @include bg--paginas ($pg--totales, $fondo--bgimg);
-    }
-
-    // &__#{$pagina} {
-    //       @extend .contenedor;
-    //       @include bg--paginas; 
-    // }
-
-    // &__laboral {
-    //     @extend .contenedor;
-    //     @include bg--paginas (laboral);
-    // }
-    // &__academico {
-    //     @extend .contenedor;
-    //     @include bg--paginas (academica);
-    // }
-    // &__tecnologia {
-    //     @extend .contenedor;
-    //     @include bg--paginas (tecnologia);
-    // }
-    // &__blog {
-    //     @extend .contenedor;
-    //     @include bg--paginas (blog);
-    // }
-    // &__contacto {
-    //     @extend .contenedor;
-    //     @include bg--paginas (contacto);
-    // }
-
-    
 
 
 /* SECCIONES INFERIORES */

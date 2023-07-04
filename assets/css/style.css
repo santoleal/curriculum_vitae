@@ -358,23 +358,23 @@ template {
   margin: auto !important;
   text-align: center;
 }
-.contenedor__page .contenedor__page1 {
-  background-image: url("../img/f_leal_francia4.jpeg");
+.contenedor__home {
+  background-image: url(../img/f_leal_4.jpeg);
 }
-.contenedor__page .contenedor__page2 {
-  background-image: url("../img/f_leal_francia.jpeg");
+.contenedor__laboral {
+  background-image: url(../img/f_leal_4.jpeg);
 }
-.contenedor__page .contenedor__page3 {
-  background-image: url("../img/f_leal_francia2.jpeg");
+.contenedor__academica {
+  background-image: url(../img/f_leal_3.jpeg);
 }
-.contenedor__page .contenedor__page4 {
-  background-image: url("../img/f_leal_francia4.jpeg");
+.contenedor__tecnologia {
+  background-image: url(../img/f_leal_4.jpeg);
 }
-.contenedor__page .contenedor__page5 {
-  background-image: url("../img/f_leal_francia2.jpeg");
+.contenedor__blog {
+  background-image: url(../img/f_leal_1.jpeg);
 }
-.contenedor__page .contenedor__page6 {
-  background-image: url("../img/f_leal_francia3.jpeg");
+.contenedor__contacto {
+  background-image: url(../img/f_leal_4.jpeg);
 }
 .contenedor__secundario {
   margin-bottom: 40px;
@@ -949,6 +949,10 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .proyecto__titulo:hover {
+    display: contents;
+    height: 100vh;
   }
   .proyecto__descripcion {
     font-size: medium;

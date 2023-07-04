@@ -7,27 +7,6 @@
     background-attachment: fixed;
 }
 
-@mixin bg--paginas ($pg--totales, $fondo--bgimg) {
-
-     @for $i from 1 through $pg--totales {
-         $random-index: random(length($fondo--bgimg)); 
-         $random-img: nth($fondo--bgimg, $random-index); 
-    
-         .contenedor__page#{$i} {
-             background-image: url($random-img);
-           }
-    
-     }
-    
-
- }
-
-
-
-
-
-    
-
 
 
 @mixin proyecto--flex {
