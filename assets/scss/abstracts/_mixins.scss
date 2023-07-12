@@ -7,7 +7,13 @@
     background-attachment: fixed;
 }
 
-
+@mixin nav--destacado {
+    background-color: $nav--destacado--fondo;
+    color: $nav--destacado--letra;
+    border-image: linear-gradient(45deg, rgb(143, 55, 0), #ffc107) 1;
+    border: 1px solid;
+    border-radius: 3px;  
+}
 
 @mixin proyecto--flex {
     display: flex;
@@ -47,3 +53,16 @@
     background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  
     background: linear-gradient(to right, #4CA1AF, #2C3E50);
 }
+
+
+@mixin contacto_cajas {
+
+    background-color: #fbfbfb; 
+    width: 100%; 
+    border-radius: 5px;  
+    border: brown 1px solid; 
+    box-sizing: border-box;
+    margin-bottom: 20px; 
+    padding: 10px;  
+    
+} 

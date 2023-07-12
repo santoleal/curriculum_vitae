@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* Variables Fuentes */
 /* Variables Fondos */
+/*Listado de Páginas*/
+/*Colores Menú */
 /*///////////////////////////
 /// ESTILOS ACTUALIZADOS PARA RESETEAR CSS (NORMALIZE)
 ///////////////////////////*/
@@ -339,6 +341,15 @@ template {
   margin-top: 10px !important;
 }
 
+.nav-link.active, .nav-link.hover {
+  background-color: #830c0c;
+  color: white;
+  border-image: linear-gradient(45deg, rgb(143, 55, 0), #ffc107) 1;
+  border: 1px solid;
+  border-radius: 3px;
+  color: white !important;
+}
+
 /*///////////////////////////
 /// CONTENEDORES
 ///////////////////////////*/
@@ -359,22 +370,28 @@ template {
   text-align: center;
 }
 .contenedor__home {
-  background-image: url(../img/f_leal_4.jpeg);
+  background-image: url(../img/f_leal_3.jpeg);
+  background-attachment: fixed;
 }
 .contenedor__laboral {
   background-image: url(../img/f_leal_4.jpeg);
+  background-attachment: fixed;
 }
 .contenedor__academica {
-  background-image: url(../img/f_leal_3.jpeg);
+  background-image: url(../img/f_leal_1.jpeg);
+  background-attachment: fixed;
 }
 .contenedor__tecnologia {
-  background-image: url(../img/f_leal_4.jpeg);
+  background-image: url(../img/f_leal_2.jpeg);
+  background-attachment: fixed;
 }
 .contenedor__blog {
-  background-image: url(../img/f_leal_1.jpeg);
+  background-image: url(../img/f_leal_4.jpeg);
+  background-attachment: fixed;
 }
 .contenedor__contacto {
-  background-image: url(../img/f_leal_4.jpeg);
+  background-image: url(../img/f_leal_2.jpeg);
+  background-attachment: fixed;
 }
 .contenedor__secundario {
   margin-bottom: 40px;
@@ -527,16 +544,42 @@ abbr[title]:hover {
 
 /* HEADER - NAVEGACIÓN */
 .navegacion {
-  border: rgb(199, 198, 198) 1px solid;
+  border: 1px solid;
   margin: 0 1px;
   text-transform: uppercase;
+  border-image: linear-gradient(183deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.0509803922)) 1;
+  /*& a:active {
+      @each $pagina in $paginas {
+          @include nav--destacado;
+      }
+  }*/
 }
 .navegacion a:hover {
-  background-color: rgb(131, 12, 12);
+  background-color: #830c0c;
   color: white;
+  border-image: linear-gradient(45deg, rgb(143, 55, 0), #ffc107) 1;
+  border: 1px solid;
+  border-radius: 3px;
 }
 .navegacion a:active {
   background-color: aquamarine;
+}
+
+footer {
+  font-family: "Viga-Regular", cursive;
+  font-size: medium;
+  padding: 20px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+footer .promocion {
+  text-transform: none;
+}
+footer .codigo {
+  text-transform: uppercase;
+  font-family: Arial, "NanumBrushScript-Regular", cursive;
+  font-size: x-large;
+  color: yellow;
 }
 
 /*///////////////////////////
@@ -545,82 +588,62 @@ abbr[title]:hover {
 /* FORMULARIO DE CONTACTO*/
 .contact_form {
   width: 460px;
-  height: auto;
   margin: 20px auto;
   border-radius: 10px;
+  padding: 10px 30px;
+  background-color: #fbfbfb;
+  box-sizing: border-box;
+}
+.contact_form .formulario {
+  outline: 0;
   padding-top: 10px;
-  padding-bottom: 20px;
-  background-color: #fbfbfb;
-  padding: 0 30px;
 }
-
-input {
+.contact_form input, .contact_form textarea {
   background-color: #fbfbfb;
-  width: 408px;
-  height: 40px;
+  width: 100%;
   border-radius: 5px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: brown;
-  margin-top: 10px;
-  padding-left: 10px;
+  border: brown 1px solid;
+  box-sizing: border-box;
   margin-bottom: 20px;
+  padding: 10px;
 }
-
-textarea {
-  background-color: #fbfbfb;
-  width: 405px;
-  height: 150px;
-  border-radius: 5px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: brown;
-  margin-top: 10px;
-  padding-left: 10px;
-  margin-bottom: 20px;
-  padding-top: 15px;
+.contact_form input:focus, .contact_form textarea:focus {
+  border: 1px solid #97d848;
 }
-
-label {
+.contact_form textarea {
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+}
+.contact_form label {
   display: block;
   float: center;
-}
-
-button {
-  height: 45px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  text-transform: uppercase;
-  background-color: brown;
-  border-color: brown;
-  border-style: solid;
-  border-radius: 10px;
-  width: 420px;
-  cursor: pointer;
-}
-button p {
-  color: #fff;
-}
-
-span {
   color: brown;
 }
-
-.aviso {
+.contact_form .aviso {
   font-size: 13px;
   color: #0e0e0e;
 }
-
-.formulario {
-  outline: 0;
+.contact_form button {
+  height: 45px;
+  padding: 10px;
+  margin: 10px auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: brown;
+  border-color: brown 1px solid;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
 }
-.formulario input:focus {
-  border: 1px solid #97d848;
+.contact_form button:hover {
+  background-color: rgb(88, 37, 37);
 }
-.formulario textarea:focus {
-  border: 1px solid #97d848;
+.contact_form button p {
+  color: #fff;
+}
+.contact_form span {
+  color: brown;
 }
 
 /*///////////////////////////
@@ -971,6 +994,11 @@ span {
     align-items: start;
     top: 0;
     border: 2px solid #fff;
+  }
+}
+@media (max-width: 480px) {
+  .contact_form {
+    width: 100%;
   }
 }
 

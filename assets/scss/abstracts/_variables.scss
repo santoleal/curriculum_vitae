@@ -9,7 +9,11 @@ $fuenteh--tamanio: (xx-large, x-large, large, medium, small);
 /* Variables Fondos */
 
 
+/*Listado de Páginas*/
 $pg--totales: 6;
 
-
 $paginas: ("home", "laboral", "academica", "tecnologia", "blog", "contacto");
+
+/*Colores Menú */
+$nav--destacado--fondo: #830c0c;
+$nav--destacado--letra:white;

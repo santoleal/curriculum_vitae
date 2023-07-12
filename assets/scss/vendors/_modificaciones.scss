@@ -32,5 +32,12 @@
 }
 
 
+.nav-link {
+    &.active, &.hover {
+    @include nav--destacado;
+    color: $nav--destacado--letra !important;
+    }
+    
+}
 
 

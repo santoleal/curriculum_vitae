@@ -1,19 +1,24 @@
 /* HEADER - NAVEGACIÓN */ 
 
 .navegacion {
-    border: rgb(199, 198, 198) 1px solid;
+    border: 1px solid;
     margin: 0 1px;
     text-transform: uppercase;
-
+    border-image: linear-gradient(183deg, rgb(0 0 0 / 1%), #0000000d) 1;
 
     & a:hover {
-    background-color: rgb(131, 12, 12);
-    color: white;
+        @include nav--destacado;
     }
 
     & a:active {
-    background-color: aquamarine;
+        background-color: aquamarine;
     }
+
+    /*& a:active {
+        @each $pagina in $paginas {
+            @include nav--destacado;
+        }
+    }*/
 
 }
 

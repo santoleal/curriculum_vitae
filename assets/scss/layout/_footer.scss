@@ -1,0 +1,18 @@
+footer {
+    font-family: $fuente--titulo;
+    font-size: medium;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+    & .promocion {
+    text-transform: none;
+    }
+
+    & .codigo {
+    text-transform: uppercase;
+    font-family: Arial, $fuente--parrafo;
+    font-size: x-large;
+    color: yellow;
+    }
+}

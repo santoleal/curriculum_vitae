@@ -17,6 +17,7 @@
         $random-index: random($total--bgimg);
         &__#{$pagina} {
             background-image: url(../img/f_leal_#{$random-index}.jpeg);
+            background-attachment: fixed;
         }
     
     }    

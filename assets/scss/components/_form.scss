@@ -3,95 +3,81 @@
 
 .contact_form{  
     width: 460px; 
-    height: auto;
     margin: 20px auto;
     border-radius: 10px;  
-    padding-top: 10px;
-    padding-bottom: 20px;  
-    background-color: #fbfbfb; 
-    padding: 0 30px; 
-  }
-  
-  
-input{
-    background-color: #fbfbfb; 
-    width: 408px; 
-    height: 40px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color: brown; 
-    margin-top: 10px;  
-    padding-left: 10px;
-    margin-bottom: 20px; 
-  }
-  
-  
-textarea{
-    background-color: #fbfbfb; 
-    width: 405px; 
-    height: 150px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color:brown; 
-    margin-top: 10px;  
-    padding-left: 10px;
-    margin-bottom: 20px; 
-    padding-top: 15px; 
-  }
-  
-  
-label{
-    display: block; 
-    float: center;  
-  }
-  
-  
-button{
-    height: 45px; 
-    padding-left: 5px;
-    padding-right: 5px;   
-    margin-bottom: 20px; 
-    margin-top: 10px;   
-    text-transform: uppercase;
-    background-color: brown; 
-    border-color: brown; 
-    border-style: solid; 
-    border-radius: 10px;  
-    width: 420px;   
-    cursor: pointer;
+    padding: 10px 30px;
+    background-color: #fbfbfb;
+    box-sizing: border-box; 
 
-  
-  
-    & p{
-        color: #fff; 
+
+    & .formulario {
+      outline:0;
+      padding-top: 10px;
+      }
+
+    & input, & textarea {
+      @include contacto_cajas;
+      &:focus {
+        border: 1px solid #97d848;
+        }
+      }
+
+    & textarea {
+      min-height: 100px;
+      max-height: 200px;
+      max-width: 100%;
+      }
+
+    & label {
+      display: block; 
+      float: center;
+      color: brown;  
+      }
+
+    & .aviso{
+        font-size: 13px;  
+        color: #0e0e0e;  
+      }
+
+
+    & button{
+        height: 45px; 
+        padding: 10px;   
+        margin: 10px auto;  
+        text-transform: uppercase;
+        font-weight:bold;
+        background-color: brown; 
+        border-color: brown 1px solid;  
+        border-radius: 10px;  
+        width: 100%;   
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(88, 37, 37);
+        }
+    
+        & p{
+            color: #fff; 
+        }
     }
-}  
-  
-  span{
-    color: brown; 
-  }
-  
-  
-.aviso{
-    font-size: 13px;  
-    color: #0e0e0e;  
+
+    & span{
+      color: brown; 
+    }
+
   }
 
+  
+  
+  
+  
+
+  
+  
 
 
-.formulario {
-    outline:0;
 
-    & input:focus{    
-        border: 1px solid #97d848;
-      }
-      
-      
-    & textarea:focus{
-        border: 1px solid #97d848;
-      }
-}
+
+
 
   
